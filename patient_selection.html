@@ -71,7 +71,8 @@ overflow-x: hidden;
    		
    } 
                          alert('hello you are about to redirect'); 
- $("#result_response").load("http://192.168.0.119:8091");
+ var ref = window.open(encodeURI('http://192.168.0.119:8091'), '_blank', 'location=yes');
+// $("#result_response").load("http://192.168.0.119:8091");
 
 //      window.location='http://192.168.0.119:8091';
                return false;
