@@ -58,9 +58,6 @@ overflow-x: hidden;
 	function onDeviceReady() {
 
 	         $(".col").hide();
-                 alert('hello you are about to redirect');
-      window.location='http://192.168.0.119:8091';
-               return false;
        			  
 
    	var networkState = navigator.connection.type;
@@ -73,7 +70,13 @@ overflow-x: hidden;
    {
    		
    } 
-   
+                         alert('hello you are about to redirect'); 
+ $("#result_response").load("http://192.168.0.119:8091");
+
+//      window.location='http://192.168.0.119:8091';
+               return false;
+
+        
   $.ajaxSetup({
         xhrFields: {
             withCredentials: true
