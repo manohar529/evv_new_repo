@@ -38,18 +38,7 @@
 			  error: function (jqXHR, textStatus, errorThrown) {
 				  var data=JSON.stringify(jqXHR, null, 4);
 				  alert("Error ALERT");
-				  alert(data);
-				  alert("ErroR");
-				  alert(jqXHR.status);
-				  alert(jqXHR.statusText);
-				  alert("One");
-				  var data1=JSON.stringify(textStatus, null, 4);
-				  alert(data1);
-				  alert(textStatus.status);
-				  alert("Two");
-				  var data2=JSON.stringify(errorThrown, null, 4);
-				  alert(data2);
-				  alert(errorThrown.statusText);
+				  
              bootbox.dialog({
   message: "Problem with connecting to server. Please try after sometime.",
   title: "Message",
