@@ -59,6 +59,12 @@ overflow-x: hidden;
 
 	         $(".col").hide();
        			  
+function fixiFrame () {
+   if ((android) && (androidVersion > 3)) {
+      iFrameContentHeight = document.getElementById('theiFrame').contentDocument.body.offsetHeight;
+      document.getElementById('theiFrame').style.height = iFrameContentHeight + 'px';
+   }
+}
 
    	var networkState = navigator.connection.type;
     if (networkState == Connection.NONE)
@@ -338,9 +344,9 @@ color:black;
             
             <!--<iframe width="320px" height="480px" src="http://google.com"></iframe>-->
         
-        <div id="content" style="height: auto; width: auto; overflow: auto; -webkit-overflow-scrolling:touch;">
-        <iframe  src="http://192.168.0.119:8091/" height="100%" scrolling="no" width="100% "> iframe content here </iframe>
-</div>
+        <iframe src='http://192.168.0.119:8091/' width='100%' scrolling='no' frameBorder='0' id='theiFrame' onLoad='fixiFrame();'></iframe>
+
+
         
         </span></center></h4>
    <input type="hidden" class="form-control input-lg" id="device_uuid"/>
