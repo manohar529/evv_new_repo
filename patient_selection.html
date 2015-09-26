@@ -60,9 +60,12 @@ overflow-x: hidden;
 	         $(".col").hide();
        			  
 function fixiFrame () {
+alert('hello-100');
    if ((android) && (androidVersion > 3)) {
+   alert('hello-101');
       iFrameContentHeight = document.getElementById('theiFrame').contentDocument.body.offsetHeight;
       document.getElementById('theiFrame').style.height = iFrameContentHeight + 'px';
+	  alert('hello-102');
    }
 }
 
