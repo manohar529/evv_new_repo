@@ -1,11 +1,11 @@
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
  Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements.  See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership.  The ASF licenses this file
  to you under the Apache License, Version 2.0 (the
- "License"; you may not use this file except in compliance
+ "License"); you may not use this file except in compliance
  with the License.  You may obtain a copy of the License at
 
  http://www.apache.org/licenses/LICENSE-2.0
@@ -25,7 +25,7 @@
 
     <description>
        This is a ios Phonegap Application
-   </description>
+	   </description>
 
     <author href="http://phonegap.io" email="dev@phonegap.apache.org">
         Apache Phonegap Team
@@ -38,7 +38,7 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="stay-in-webview" value="true" />
-<preference name="phonegap-version" value="3.0.0" />
+	<preference name="phonegap-version" value="3.0.0" />
     <preference name="loglevel" value="DEBUG" />
       <preference name="SplashScreen" value="splash" />
       <preference name="backgroundColor" value="0xFFF" />
@@ -50,29 +50,29 @@
       <preference name="ios-orientation-iphone" value="portrait" />
 <preference name="ios-orientation-ipad" value="portrait and landscape" /> 
       <platform name="android">
-      	<gaplatform name="ios" />
-      	<gaplatform name="android" />
-      	<gaplatform name="winphone" />
+      	<gap:platform name="ios" />
+      	<gap:platform name="android" />
+      	<gap:platform name="winphone" />
     <splash src="res/screen/android/homecare_logo.png" density="port-hdpi"/>
     <splash src="res/screen/android/homecare_logo.png" density="port-ldpi"/>
     <splash src="res/screen/android/homecare_logo.png" density="port-mdpi"/>
     <splash src="res/screen/android/homecare_logo.png" density="port-xhdpi"/>
   </platform>
-  <gaplugin name="org.apache.cordova.core.camera" />
-  <gaplugin name="cordova.plugins.diagnostic" source="plugins.cordova.io" />
-<gaplugin name="org.apache.cordova.core.geolocation" />
-<gaplugin name="org.apache.cordova.core.dialogs" />
-<gaplugin name="org.apache.cordova.device" />
-<gaplugin name="org.apache.cordova.device-motion" />
-<gaplugin name="org.apache.cordova.device-orientation" />
-<gaplugin name="org.apache.cordova.network-information" />
-<gaplugin name="org.apache.cordova.dialogs" />
-<gaplugin name="org.apache.cordova.splashscreen" />
-<gaplugin name="hu.dpal.phonegap.plugins.uniquedeviceid" source="plugins.cordova.io" />
+  <gap:plugin name="org.apache.cordova.core.camera" />
+  <gap:plugin name="cordova.plugins.diagnostic" source="plugins.cordova.io" />
+<gap:plugin name="org.apache.cordova.core.geolocation" />
+<gap:plugin name="org.apache.cordova.core.dialogs" />
+<gap:plugin name="org.apache.cordova.device" />
+<gap:plugin name="org.apache.cordova.device-motion" />
+<gap:plugin name="org.apache.cordova.device-orientation" />
+<gap:plugin name="org.apache.cordova.network-information" />
+<gap:plugin name="org.apache.cordova.dialogs" />
+<gap:plugin name="org.apache.cordova.splashscreen" />
+<gap:plugin name="hu.dpal.phonegap.plugins.uniquedeviceid" source="plugins.cordova.io" />
 
 
 
-<feature name="http://api.phonegap.com/1.0/device"/>
+	<feature name="http://api.phonegap.com/1.0/device"/>
     	<feature name="http://api.phonegap.com/1.0/battery"/>
     <feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="http://api.phonegap.com/1.0/contacts"/>
