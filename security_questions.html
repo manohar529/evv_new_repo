@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+		  	<title>Electronic Visit Verification Security Questions Screen</title>
+			
+			<link rel='stylesheet' href='style.css' type='text/css'/> 
+			
+    		<link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css" media="screen" type="text/css" />
+     <script src="plugins/jquery-1.11.2.min.js"></script>
+    		
+    		<script type="text/javascript" src="cordova.js"></script>
+    		<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+         	<script src="plugins/bootbox.js"></script>
+        	<script src="plugins/bootbox.min.js"></script>
+        	<script src="js/security_questions.js"></script>
+    	
+</head>
+
+<body>
+<div class="container">
+<div class="row">
+   
+      <div class="col-md-offset-3 col-sm-6 col-sm-offset-3">
+      <section class="global-form">
+        <span id="bootstrap"></span>
+        <form name='frm' method="post"  id="formoid"  role="global">
+          <img src="images/homecare_logo.png" class="img-responsive" alt="logo" style="HEIGHT:62PX;"/>
+          
+          <center><h4>Security Questions</h4></center>
+          
+                <center>Select a security question and provide answer, these details are required in case you forgot your device log-in PIN in future.</center>
+              <p>
+              </p>
+                <select class="form-control" id="security_question" style="margin-bottom: -1px;">
+</select>
+                <input type="password" name="securityanswer"   class="form-control input-lg" id="security_answer" style=" height: 31px;"/>
+                <input type="hidden" id="device_uuid"/>   
+          <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" id="submit_button">Submit</button>
+          
+         
+          
+        </form>
+        
+        <div class="form-links">
+          <a href="http://www.ondemandhomecare.com/">www.ondemandhomecare.com</a>
+        </div>
+      </section>  
+      </div>
+  </div>
+</div>
+</body>
+</html>

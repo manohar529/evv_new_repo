@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Attendance System</title>
+	<script type="text/javascript" src="plugins/maps.google.com.maps.api.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+	<script type="text/javascript" src="cordova.js"></script>
+	
+	<link href="check-in.css" rel="stylesheet">
+	<script src="plugins/jquery-1.11.2.min.js"></script>
+	<script src="js/check_out.js"></script>
+ 	<script src="plugins/jquery-1.11.2.js"></script>
+	<link href="bootstrap-3.3.4/css/bootstrap.css" rel="stylesheet">
+	<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+	<script src="plugins/bootbox.js"></script>
+    <script src="plugins/bootbox.min.js"></script>
+    	
+
+
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<a href="check-in_summary.html" onclick="window.history.go(-1); return false;"><img src="images/backbutton.png" alt style="height: 50px;float: left;""></a>
+     
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            
+			<div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="images/homecare_logo.png" alt style="height: 39px;margin-top: -8px;"">
+                    
+                </a>
+                
+            </div>
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="contactus.html">Contact</a>
+                    </li>
+					<li>
+                        <a href="log-in.html">Logout</a>
+                    </li>
+                     <li>
+                    	<a><span id="agency_name"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+   
+
+</head>
+
+<body>
+
+
+<body>
+	<div id="map-canvas"></div>
+	 <form name='frm' method="post"  id="check_out_form"  role="login">
+
+       
+<div style="border: none;" class="col-md-12 col-xs-12 col-sm-12"> 
+<p class="dotted">
+<span class="glyphicon glyphicon-user" class="col-md-12 col-xs-12 col-sm-12" style="border: none;"></span>
+<span style=" background-color: none" id="exampleInputpatientname1"> </span>
+     </p>
+      </div>
+      
+      
+<div  style="border: none;" class="col-md-6 col-xs-12 col-sm-6"> 
+<p class="dotted">
+ <span class="glyphicon glyphicon-bed"  style="border: none;"></span>
+ <span style=" background-color: none"  id="exampleInputvisittype1"> </span>
+ </div>
+ </p>
+
+
+
+
+
+<div  style="border: none;" class="col-md-6 col-xs-12 col-sm-6"> 
+<p class="dotted">
+  <span class="glyphicon glyphicon-time"  style="border: none;"></span>
+ <span style=" background-color: none"  id="exampleInputscheduledtime1"> </span>
+      </div>
+</p>
+      
+      
+	<input type="hidden" class="form-control" id="exampleInputpatientname1" value="" disabled/>
+	<input type="hidden" class="form-control" id="latitude" value="" disabled />
+	<input type="hidden" class="form-control" id="longitude" value="" disabled />
+	<input type="hidden" class="form-control" id="exampleInputvisittype1" value="" disabled />
+	<input type="hidden" size="450px" class="form-control" id="exampleInputscheduledtime1" value="" disabled />
+
+
+
+
+<span class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+<b><div id="timer">Current Time: <span id="time"></span></div></b>
+</span>
+
+
+
+<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+<b><div class="input-group" id="timer">Check-In Time:
+<span id="checked_in_time_temp"></span></b>
+</div>
+</div>
+
+
+
+
+
+</span>
+
+
+<div class="col-sm-6 col-xs-6 col-md-6 ">
+	<label for="exampleInputexpenses1"></label>
+	<input type="tel"  size="450px"  step="any" maxlength="8"   class="form-control" id="exampleInputexpenses1" placeholder="Expenses"/>
+
+</div>
+
+
+<div class="col-sm-6 col-xs-6 col-md-6 ">
+	<label for="exampleInputmiledge1"></label>
+	<input type="tel"  size="450px" step="any" maxlength="6"  class="form-control" id="exampleInputmiledge1" placeholder="Mileage"/>
+
+</div>
+
+
+
+
+<span id="errmsg"></span>
+
+
+</span>
+
+<h5><span id="style_css" class="col-sm-12 col-xs-12 col-md-12" style="padding: 12px;">
+<b>Patient Signature</b></span></h5>
+<div id="page" data-role="content"><center>
+<div class="col-sm-12 col-xs-12 col-md-12 ">
+<p></p>
+<div class="ui-content popUpHeight" style="position: relative;bottom: 24px;">
+<div class="col-sm-6 col-xs-6 col-md-6 col-lg-6" id="div_signcontract" style="position: relative;top: -11px; right: 19px;">
+				<span class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="top: 19px; margin-left: -1px;">		
+				<button type="button" class="btn btn-primary btn-xs " onclick="init_Sign_Canvas()" style="margin-left: 258px;">Clear</button>
+		</span>
+					<canvas id="canvas">Canvas is not supported</canvas>
+				
+				</div>
+			</div></center>
+</div>
+
+
+		
+<br>
+
+
+
+<div id="page" data-role="content">
+  
+			
+		
+        <button type="submit" name="go" id="check_out" class="btn btn-lg btn-primary btn-block" style="position: relative;
+    bottom: 36px;
+">Check-Out</button>
+ </form>
+ 
+ 
+ 
+  
+ 
+  <div class="form-links">
+  <center><a href="http://www.ondemandhomecare.com/" style="position: relative;bottom: 33px;">www.ondemandhomecare.com</a></center>
+        </div>
+      </section>  
+      </div>
+      
+      <div class="col-md-4"></div>
+</body>
+</html>        

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+		  	<title>Electronic Visit Verification Visit Details Screen</title>
+			
+			<link rel='stylesheet' href='style.css' type='text/css'/> 
+			<link href="check-in.css" rel="stylesheet">
+    		<script src="plugins/jquery-1.11.2.min.js"></script>
+    		<script src="plugins/jquery-1.11.2.js"></script>
+    		<script type="text/javascript" src="cordova.js"></script>
+    		<link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css" media="screen" type="text/css" />
+     		<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    		<script src="js/visit_details.js">
+    		<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    		<script src="plugins/bootbox.js"></script>
+    		<script src="plugins/bootbox.min.js"></script>
+    		
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a href="show_other_schedules.html" onclick="window.history.go(-1); return false;"><img src="images/backbutton.png" alt style="height: 50px;float: left;""></a>
+     	
+        <div class="container">
+            
+            
+			<div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="images/homecare_logo.png" alt style="height: 39px;margin-top: -8px;"">
+                    
+                    
+                </a>
+                
+            </div>
+            
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="contactus.html">Contact</a>
+                    </li>
+					<li>
+                        <a href="log-in.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+            <div class="col-lg-12 col-sm-12 col-sm-12">
+            
+
+<div class="container">
+<div class="row">
+  
+   
+<div class="col-md-offset-3 col-sm-6 col-sm-offset-3">
+          <section class="global-form">
+        <span id="bootstrap"></span>
+        <form method="post" action="patient_selection.html" onsubmit="return formValidation();" role="global" style="padding: 22px;">
+        
+        
+         
+           <h4><p class="text-center">Visit Details</p></h4>
+      
+          
+  <span class="col-md-12 col-xs-12 col-sm-12">
+
+<div style="border: none;" class="col-md-12 col-xs-12 col-sm-12"> 
+<div class="input-group">
+<span class="glyphicon glyphicon-user" class="col-md-12 col-xs-12 col-sm-12" style="border: none;"></span>
+<span style=" background-color: none" id="exampleInputpatientname1"> </span>
+    </div>
+      </div>
+      
+      
+<div  style="border: none;" class="col-md-6 col-xs-12 col-sm-6"> 
+<div class="input-group">
+
+ <span class="glyphicon glyphicon-bed"  style="border: none;"></span>
+ <span style=" background-color: none"  id="exampleInputvisittype1"> </span>
+ </div>
+ </div>
+
+
+
+<div  style="border: none;" class="col-md-6 col-xs-12 col-sm-6"> 
+<div class="input-group">
+  <span class="glyphicon glyphicon-time"  style="border: none;"></span>
+ <span style=" background-color: none"  id="exampleInputscheduledtime1"> </span>
+      </div>
+      </div>
+
+
+
+
+
+<b>
+
+
+<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+<p><//p>
+<b><div class="input-group">Check-In Time:
+<span id="checked_in_time"></span></b>
+</div>
+</div>
+
+
+
+
+
+<span class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+
+
+</b>
+
+
+
+
+<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+<p></p>
+<b><div class="input-group">Check-Out Time:
+<span id="checked_out_time"></span></b>
+</div>
+</div>
+</b>
+</span>
+
+
+
+<button type="submit" name="go" class="btn btn-lg btn-primary btn-block" style="
+    background-color: #1357A6;
+">Proceed with next patient</button>
+          </form>
+        
+        
+      </section>  
+      </div>
+     
+      
+
+  </div>
+  
+ 
+  <div class="form-links">
+          <a href="http://www.ondemandhomecare.com/">www.ondemandhomecare.com</a>
+        </div>
+  
+</div>
+</body>
+
+</html>
