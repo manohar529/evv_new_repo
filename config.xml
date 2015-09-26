@@ -35,7 +35,7 @@
   
 
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
-    <content src="https://www.google.co.in/" />
+    <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="stay-in-webview" value="true" />
 	<preference name="phonegap-version" value="3.0.0" />
