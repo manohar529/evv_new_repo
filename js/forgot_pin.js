@@ -32,7 +32,7 @@ $(document).ready(function(){
 		  
 		   
         $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -50,7 +50,7 @@ $(document).ready(function(){
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/get_registered_emails',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/get_registered_emails',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: 'device_uuid='+device.uuid,
@@ -106,7 +106,7 @@ for (var i = 0; i < data.emails.length; ++i) {
 		  
 		   
         $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -124,7 +124,7 @@ for (var i = 0; i < data.emails.length; ++i) {
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/get_security_questions',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/get_security_questions',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: 'device_uuid='+device.uuid,
@@ -324,7 +324,7 @@ for (var i = 0; i < data.emails.length; ++i) {
 		  
 		   
         $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -342,7 +342,7 @@ for (var i = 0; i < data.emails.length; ++i) {
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/send_email',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/send_email',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: {device_uuid:device_uuid,email_id:email,question_id:security_question,answer:security_answer},
@@ -480,7 +480,7 @@ for (var i = 0; i < data.emails.length; ++i) {
 
 
 
-		$.post( "http://183.82.96.212:8080/m_service/m_resources/send_email" , {device_uuid:device_uuid,email_id:email,question_id:security_question,answer:security_answer}, function( data ) {
+		$.post( "http://192.168.0.119:8091/m_service/m_resources/send_email" , {device_uuid:device_uuid,email_id:email,question_id:security_question,answer:security_answer}, function( data ) {
 
 
 			 bootbox.dialog({
@@ -540,7 +540,7 @@ for (var i = 0; i < data.emails.length; ++i) {
 		  
 		   
         $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -558,7 +558,7 @@ for (var i = 0; i < data.emails.length; ++i) {
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/alert_admin',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/alert_admin',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: 'device_uuid='+device.uuid,
@@ -740,7 +740,7 @@ var device_uuid = device.uuid;
     			{
 				
 				  $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -758,7 +758,7 @@ var device_uuid = device.uuid;
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/check_user_valid',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/check_user_valid',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: {username:username,password:password,device_uuid:device_uuid},

@@ -24,7 +24,7 @@
 		
 	
    $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -41,7 +41,7 @@
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/get_check_in_summary_details',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/get_check_in_summary_details',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: {sch_uuid:sch_uuid},

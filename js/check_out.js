@@ -27,7 +27,7 @@ $(document).ready(function(){
 	
 	
 	 $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -43,7 +43,7 @@ $(document).ready(function(){
     });
 	
       $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/get_checkout_visit_details',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/get_checkout_visit_details',
               type: "post",
       		  data: 'sch_uuid='+sch_uuid,
               dataType: "json",
@@ -311,7 +311,7 @@ sec = ("0" + sec).slice(-2);
     });
 
 		$.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -328,7 +328,7 @@ sec = ("0" + sec).slice(-2);
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/employee_visit_check_out',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/employee_visit_check_out',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: { imgData:imgData, device_unique_id:device_uuid,latitude:latitude,longitude:longitude,sch_uuid:sch_uuid,expenses:expenses,mileage:mileage},

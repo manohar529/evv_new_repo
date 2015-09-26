@@ -13,7 +13,7 @@ function logout()
 	  
 	   
     $.ajax({
-      url:"http://183.82.96.212:8080/services/session/token",
+      url:"http://192.168.0.119:8091/services/session/token",
       type:"get",
       dataType:"text",
       error:function (jqXHR, textStatus, errorThrown) {
@@ -24,7 +24,7 @@ function logout()
     	  alert(token);
 	
 	$.ajax({
-	 url:"http://183.82.96.212:8080/m_service/user/logout",
+	 url:"http://192.168.0.119:8091/m_service/user/logout",
 	 type:"POST",
 	 dataType:"json",	
 	 success:function(data)

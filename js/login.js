@@ -92,7 +92,7 @@ var loginpin = /^\d{4}$/;
 		{
 		
 	$.ajax({
-		 url:"http://183.82.96.212:8080/m_service/user/login",
+		 url:"http://192.168.0.119:8091/m_service/user/login",
 		 data:"username="+d.value+"&password="+loginpin1,
 		 type:"POST",
 		 dataType:"json",	

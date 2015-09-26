@@ -43,7 +43,7 @@
 	
 	
   
-	$.post( "http://183.82.96.212:8080/m_service/m_resources/get_check_in_summary_details" , {sch_uuid:sch_uuid}, function( data ) {
+	$.post( "http://192.168.0.119:8091/m_service/m_resources/get_check_in_summary_details" , {sch_uuid:sch_uuid}, function( data ) {
 
  patient_name=data.checkin_data[0].patient_name;
  visit_type=data.checkin_data[0].visit_type;

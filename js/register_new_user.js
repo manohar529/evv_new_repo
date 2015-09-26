@@ -187,7 +187,7 @@ var device_version = document.getElementById("device_version");
 		  
 		   
         $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -204,7 +204,7 @@ var device_version = document.getElementById("device_version");
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/?q=m_service/m_resources/register_device',
+              url: 'http://192.168.0.119:8091/?q=m_service/m_resources/register_device',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: { username:encodeURIComponent(username),password:encodeURIComponent(password),pin:encodeURIComponent(""),device_uuid:encodeURIComponent(device_uuid.value), device_name:encodeURIComponent(""),device_model:encodeURIComponent(""),device_platform:encodeURIComponent(""), device_version:encodeURIComponent(""), device_already_registered:encodeURIComponent("1")},

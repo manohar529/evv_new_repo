@@ -37,7 +37,7 @@ $(document).ready(function(){
 		  
 		   
         $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -55,7 +55,7 @@ $(document).ready(function(){
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/get_security_questions',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/get_security_questions',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: 'device_uuid='+device.uuid,
@@ -155,7 +155,7 @@ $(document).ready(function(){
 		  
 		   
         $.ajax({
-          url:"http://183.82.96.212:8080/services/session/token",
+          url:"http://192.168.0.119:8091/services/session/token",
           type:"get",
           dataType:"text",
            crossDomain: true,
@@ -173,7 +173,7 @@ $(document).ready(function(){
     });
 	
             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/save_security_questions',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/save_security_questions',
               type: "POST",
 	  		  //data: 'device_uuid='+'8dc6cf319947e729',
       		  data: { device_uuid:device_uuid,question_id:security_question, answer:security_answer},

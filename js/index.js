@@ -28,7 +28,7 @@
  function is_device_registered(device_uuid)
 {
 	             $.ajax({
-              url: 'http://183.82.96.212:8080/m_service/m_resources/is_device_registered',
+              url: 'http://192.168.0.119:8091/m_service/m_resources/is_device_registered',
               type: "post",
       		  data: 'device_uuid='+device.uuid,
               dataType: "json",
